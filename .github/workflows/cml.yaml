@@ -12,3 +12,4 @@ jobs:
         run:
           # Workflow fro user starts here
           python -m pip install -r requirements.txt
+          python model.py
