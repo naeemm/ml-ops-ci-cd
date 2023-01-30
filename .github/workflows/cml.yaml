@@ -9,11 +9,6 @@ jobs:
       - name: 'Train regression Model'
         env:
           repo_token: ${{secrets.GITHUB_TOKEN}}
-        run: 
-
+        run:
           # Workflow fro user starts here
-          python3 -m pip install -r requirements.txt
-          python3 train.py
-
-
-
+          python -m pip install -r requirements.txt
