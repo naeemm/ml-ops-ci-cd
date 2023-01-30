@@ -12,8 +12,8 @@ jobs:
         run: 
 
           # Workflow fro user starts here
-          pip install -r requirements.txt
+          python -m pip install -r requirements.txt
           python train.py
-           
+
 
 
