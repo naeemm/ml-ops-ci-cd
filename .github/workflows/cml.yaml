@@ -5,16 +5,15 @@ jobs:
     runs-on: [ubuntu-22.04]
     container: docker://dvcorg/cml-py3:latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - uses: actions/checkout@v3      
       - name: 'Train regression Model'
         env:
           repo_token: ${{secrets.GITHUB_TOKEN}}
         run: 
 
           # Workflow fro user starts here
-          python -m pip install -r requirements.txt
-          python train.py
+          python3 -m pip install -r requirements.txt
+          python3 train.py
 
 
 
