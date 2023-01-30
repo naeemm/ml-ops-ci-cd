@@ -1,0 +1,19 @@
+name: tensorflow-regression-ml-ops-ci-cd
+on: [push]
+jobs:
+  run:
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Train regression Model'
+        env:
+          repo_token: ${{secrets.GITHUB_TOKEN}}
+        run: 
+
+          # Workflow fro user starts here
+          pip install -r requirements.txt
+          python train.py
+           
+
+
