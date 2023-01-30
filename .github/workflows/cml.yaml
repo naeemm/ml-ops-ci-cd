@@ -2,7 +2,7 @@ name: tensorflow-regression-ml-ops-ci-cd
 on: [push]
 jobs:
   run:
-    runs-on: [ubuntu-latest]
+    runs-on: [ubuntu:20.04]
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
