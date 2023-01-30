@@ -6,6 +6,7 @@ jobs:
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
       - name: 'Train regression Model'
         env:
           repo_token: ${{secrets.GITHUB_TOKEN}}
